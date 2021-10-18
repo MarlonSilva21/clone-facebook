@@ -87,3 +87,13 @@ ul#list-icons-nav li {
   padding: 0 0 1px;
   opacity: 0.9;
 }
+
+.p-fixed-l{
+  position: fixed;
+  left: 0;
+}
+
+.p-fixed-r{
+  position: fixed;
+  right: 0;
+}
