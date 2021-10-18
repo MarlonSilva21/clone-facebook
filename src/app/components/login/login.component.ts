@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,16 @@ export class LoginComponent implements OnInit {
 
   year: number[] = [];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(){
+    window.scroll(0,0)
+  }
+
+  entrar(){
+    this.router.navigate(['/home'])
   }
 
 

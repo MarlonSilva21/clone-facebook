@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
+
+ul{
+  list-style: none;
+}
+
+.p-0-16{
+  padding: 0 16px;
+}
+
+ul.mt-li li{
+  margin-top: 15px;
+}
+
+ul.ml-li li{
+  margin-left: 10px;
+}
+
+.bg-light{
+  background-color: #FFF !important;
+}
+
+.shw{
+  box-shadow: 0 0 7px -2px #9b9494;
+}
+
+.inp-search{
+  background-color: #f0f2f5;
+  border-radius: 50px;
+  border: none;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.img-opacity{
+  opacity: 0.7;
+}
+
+.icons{
+  width: 28px;
+  height: 25px;
+}
+
+ul#list-icons-nav li {
+  margin-left: 80px;
+  opacity: 0.6;
+}
+
+.circle-icons{
+  width: 35px;
+  height: 35px;
+  margin: 0 3px;
+  background-color: #e4e6eb;
+  border-radius: 50%;
+}
+
+.circle-img-user{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle-img-user-two{
+  width: 33px;
+  height: 33px;
+
+  border-radius: 50%;
+}
+
+.name-user{
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.font-segoe{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: .8375rem;
+}
+
+.shortcut{
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #65676b;
+  padding: 0 0 1px;
+  opacity: 0.9;
+}
