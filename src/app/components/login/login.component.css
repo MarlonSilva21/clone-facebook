@@ -1,0 +1,181 @@
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+ul li{
+  padding: 0 5px;
+}
+
+body{
+  height: 100vh;
+  background-color: #f0f2f5 !important;
+}
+
+main{
+  height: 80vh;
+  width: 100%;
+  background-color: #f0f2f5;
+
+  line-height: 1.34;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+.w-90{
+  width: 93%;
+}
+
+.ml-8{
+  margin-left: 8%;
+}
+
+.ml-44px{
+  margin-left: 44px;
+}
+
+.bg-color-white{
+  background-color: white;
+}
+
+.mt-8rem{
+  margin-top: 8.5rem;
+}
+
+.pl-45{
+  padding-left: 45px;
+}
+
+.btn-color-primary{
+  background-color: var(--color-text-primary);
+}
+.btn-color-success{
+  background-color: var(--color-text-succes);
+}
+
+h2.text-format{
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  width: 500px;
+}
+
+.color-text-primary{
+  color: var(--color-text-primary);
+}
+
+.fb_logo{
+  height: 106px;
+  margin: 0 -28px ;
+}
+
+.form-login{
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  box-sizing: border-box;
+  margin: 70px 0 0;
+
+  padding-bottom: 24px;
+  padding-top: 10px;
+  width: 370px;
+}
+
+.mt-16px{
+  margin-top: 16px;
+  font-size: 14px;
+  color: #1877f2;
+  font-weight: 500;
+}
+
+.create-page{
+  color: #1c1e21;
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  padding-top: 0;
+  margin-top: 30px;
+}
+
+input{
+  font-size: 16px;
+  padding: 12px ;
+  border-radius: 6px;
+  border: 1px solid #dddfe2;
+  margin: 4px 0;
+}
+
+.list-languages{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #8a8d91;
+}
+
+ul.list-languages{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+ul.list-languages li{
+  color: #8a8d91;
+}
+
+
+
+/*modal*/
+
+.registerSpan{
+  color: #606770;
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.modal-content{
+  width: 80% !important;
+}
+
+.input-modal{
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding: 0 6px;
+}
+
+.span-modal{
+  color: #606770;
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 2px;
+}
+
+.img-span-modal{
+  width: 16px;
+  height: 12px;
+  background-position: 0 -60px;
+
+}
+
+.p-modal{
+  margin: 10px 0;
+  width: auto;
+  color: #6e6969;
+  font-size: 11px;
+}
+
+.modal-header{
+  padding: 0 1rem !important;
+}
+
+.modal-footer{
+  border-top: none !important;
+  justify-content: center !important;
+}

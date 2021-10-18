@@ -1,0 +1,248 @@
+
+<main class="d-flex align-items-center">
+
+  <div class="container ">
+    <div class="row d-flex justify-content-center align-items-center ml-8">
+
+      <div class="col-md-6 ">
+
+        <img class="fb_logo img" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook">
+        <h2 class="text-format" >O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</h2>
+
+      </div>
+
+      <div class="col-md-6 d-flex ">
+
+       <div class="text-center ">
+
+         <div class="form-login ml-2">
+
+
+             <label for="email"></label>
+             <input class="w-90" type="text" id="email" placeholder="Email ou telefone"> <br/>
+
+             <label for="password"></label>
+             <input class="w-90" type="password" id="password" placeholder="Senha"> <br/>
+
+             <button class="btn btn-color-primary text-white w-90 mt-3 pt-2 pb-2 font-weight-bold">
+               Entrar
+             </button> <br/>
+
+           <div class="mt-16px">
+           <a href="#">Esqueceu a senha</a>
+           </div>
+
+           <hr class="w-90">
+
+           <button class="btn btn-color-success text-white pt-2 pb-2 font-weight-bold"
+                   data-toggle="modal" data-target="#registerUser" (click)="ano()">Criar nova conta</button>
+         </div>
+         <div class="create-page">
+           <a href="#" class="text-dark font-weight-bold ">Criar uma Página</a> para uma celebridade, banda ou empresa.
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container-fluid mt-8rem bg-color-white">
+  <div class="row justify-content-center">
+    <div class="col-md-8 d-flex flex-column justify-content-center">
+
+
+      <ul class="d-flex mt-5 mb-0 align-items-center list-languages">
+
+        <li class="text-dark">Português (Brasil)</li>
+        <li>English (US)</li>
+        <li>Español</li>
+        <li>Français (France)</li>
+        <li>Italiano</li>
+        <li>Deutsch</li>
+        <li>العربية</li>
+        <li>हिन्दी</li>
+        <li>中文(简体)</li>
+        <li>日本語</li>
+        <li class="list-group-item font-weight-bold ml-3"> + </li>
+
+      </ul>
+
+      <hr class="w-90 ml-44px">
+
+      <ul class="d-flex flex-wrap font-weight-light  align-items-center list-languages">
+
+        <li>Cadastre-se</li>
+        <li>Entrar</li>
+        <li>Messenger</li>
+        <li>Facebook Lite</li>
+        <li>Watch</li>
+        <li>Locais</li>
+        <li>Jogos</li>
+        <li>Marketplace</li>
+        <li>Facebook Pay</li>
+        <li>Vagas de emprego</li>
+        <li>Oculus</li>
+        <li>Portal</li>
+        <li>Instagram</li>
+        <li>Local</li>
+        <li>Campanhas de arrecadação de fundos</li>
+        <li>Serviços</li>
+        <li>Central de Informações de Votação</li>
+        <li>Empresas</li>
+        <li>Sobre</li>
+        <li>Criar anúncio</li>
+        <li>Criar Página</li>
+        <li>Desenvolvedores</li>
+        <li>Carreiras</li>
+        <li>Privacidade</li>
+        <li>Cookies</li>
+        <li>Escolhas para anúncios</li>
+        <li>Termos</li>
+        <li>Ajuda</li>
+
+      </ul>
+
+      <p class="pl-45 list-languages">Facebook &copy; 2021</p>
+
+    </div>
+  </div>
+</div>
+
+<!--modal-->
+<div class="modal fade" id="registerUser" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content dark2 shadow-lg">
+      <div class="modal-header">
+        <div>
+          <h2 class="modal-title font-weight-bold" id="exampleModalLabel">Cadastre-se</h2>
+          <span class="registerSpan ">É rápido e fácil</span>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+
+        <div class="d-flex">
+
+          <label for="name"></label>
+          <input  type="text" class="form-control" id="name" placeholder="Nome">
+
+          <label for="sobrenome"></label>
+          <input  class="form-control ml-2"  id="sobrenome" placeholder="Sobrenome">
+
+        </div>
+
+        <div class="d-flex align-content-start">
+          <label for="user"></label>
+          <input  type="text" class="form-control" id="user" placeholder="Celular ou email">
+        </div>
+
+        <div class="d-flex align-content-start">
+          <label for="newPassword"></label>
+          <input  type="text" class="form-control" id="newPassword" placeholder="Nova senha">
+        </div>
+
+        <span class="span-modal">Data de nascimento </span>
+        <img class="img-span-modal" src="https://i.imgur.com/V4YrC4E.png" alt="">
+
+        <div class="d-flex mb-2">
+
+          <label for="day"></label>
+          <select class="form-control"  id="day"  >
+            <option> 1 </option>
+            <option> 2 </option>
+            <option> 3 </option>
+            <option> 4 </option>
+            <option> 5 </option>
+            <option> 6 </option>
+            <option> 7 </option>
+            <option> 8 </option>
+            <option> 9 </option>
+            <option> 10 </option>
+            <option> 11 </option>
+            <option> 12 </option>
+            <option> 13 </option>
+            <option> 14 </option>
+            <option> 15 </option>
+            <option> 16 </option>
+            <option> 17 </option>
+            <option> 18 </option>
+            <option> 19 </option>
+            <option> 20 </option>
+            <option> 21 </option>
+            <option> 22 </option>
+            <option> 23 </option>
+            <option> 24 </option>
+            <option> 25 </option>
+            <option> 26 </option>
+            <option> 27 </option>
+            <option> 28 </option>
+            <option> 29 </option>
+            <option> 30</option>
+            <option> 31 </option>
+          </select>
+
+          <label for="month"></label>
+          <select class="form-control ml-2 mr-2"  id="month">
+            <option>Jan</option>
+            <option>Fev</option>
+            <option>Mar</option>
+            <option>Abr</option>
+            <option>Mai</option>
+            <option>Jun</option>
+            <option>Jul</option>
+            <option>Ago</option>
+            <option>Set</option>
+            <option>Out</option>
+            <option>Nov</option>
+            <option>Dez</option>
+          </select>
+
+          <label for="year"></label>
+          <select class="form-control" id="year">
+
+            <option>2021</option>
+          </select>
+      </div>
+
+        <span class="span-modal ">Gênero</span>
+        <img class="img-span-modal" src="https://i.imgur.com/V4YrC4E.png" alt="">
+
+        <div class="d-flex ">
+
+          <div class="form-control d-flex align-items-baseline  justify-content-between ">
+            <label for="female" class="input-modal">Feminino</label>
+            <input class="" type="radio" id="female">
+          </div>
+
+          <div class="form-control d-flex align-items-baseline justify-content-between ml-2 mr-2">
+           <label for="male" class="input-modal">Masculino</label>
+            <input class="" type="radio" id="male">
+          </div>
+
+          <div class="form-control d-flex align-items-baseline justify-content-between ">
+            <label for="other" class="input-modal">Personalizado</label>
+            <input class="" type="radio" id="other">
+          </div>
+
+        </div>
+
+        <div class="p-modal">
+          <p>Ao clicar em Cadastre-se, você concorda com nossos
+            <span class="text-primary">Termos, Política de Dados</span> e
+            <span class="text-primary">Política de Cookies.</span>
+            Você poderá receber notificações por SMS e cancelar isso quando quiser.</p>
+        </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success w-75"  data-dismiss="modal">Cadastre-se</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
