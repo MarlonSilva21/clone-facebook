@@ -24,6 +24,43 @@ ul.ml-li li{
   box-shadow: 0 0 7px -2px #9b9494;
 }
 
+.fz-10{
+  font-size: 10px;
+}
+
+.fz-12{
+  font-size: 14px;
+}
+
+.fz-20{
+  font-size: 30px;
+}
+
+.f-ubuntu{
+  font-weight: 450;
+  color: #65676b;
+}
+
+.f-bold-500{
+  font-weight: 500;
+}
+
+.f-color-grey{
+  color: #65676b;
+}
+
+.lh-15{
+  line-height: 15px;
+}
+
+.bg-sy{
+  background-color: #e4e6eb;
+}
+
+.mt-li-disabled{
+  margin: 0 !important;
+}
+
 .inp-search{
   background-color: #f0f2f5;
   border-radius: 50px;
@@ -67,6 +104,13 @@ ul#list-icons-nav li {
   border-radius: 50%;
 }
 
+.circle-img-user-three{
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+}
+
 .name-user{
   margin-top: 10px;
   margin-left: 5px;
@@ -96,4 +140,85 @@ ul#list-icons-nav li {
 .p-fixed-r{
   position: fixed;
   right: 0;
+
+  padding-bottom: 4rem;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+
+.p-fixed-r::-webkit-scrollbar {
+  background: transparent   !important;
+  width: 6px;
+}
+
+.p-fixed-r:hover::-webkit-scrollbar {
+  width: 6px;
+  background: #a1a1a9;
+}
+
+.p-fixed-r:hover::-webkit-scrollbar-thumb {
+  background: #a1a1a9;
+}
+
+.recommended-section{
+  width: 100%;
+  height: 320px;
+  background-color: #FFF;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0 0 0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.recommended-section-intern{
+  display: block;
+  width: 97%;
+  height: 55%;
+  background-color: #000;
+  border-radius: 6px;
+  margin: auto;
+}
+
+.img-rsi{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  margin: auto;
+}
+
+.icon-create-home{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/eY_ig7a4Wby.png);
+  background-position: 0 -346px;
+  background-size: 26px 446px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  opacity: .6;
+}
+
+.icon-search-contacts{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/K75psRNo_n5.png);
+  background-position: -72px -176px;
+  background-size: 190px 212px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  opacity: .6;
+}
+
+.icon-etc{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/K75psRNo_n5.png);
+  background-position: 0 -132px;
+  background-size: 190px 212px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  opacity: .6;
+}
+
