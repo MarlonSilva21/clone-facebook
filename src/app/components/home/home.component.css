@@ -438,3 +438,8 @@ input.plh{
   max-height: 500px;
   min-width: 100%;
 }
+
+.dropdown-menu{
+  left: auto !important;
+  right: 0 !important;
+}

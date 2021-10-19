@@ -49,6 +49,10 @@ main{
   padding-left: 45px;
 }
 
+.inp-bg{
+  background-color: #f5f6f7;
+}
+
 .btn-color-primary{
   background-color: var(--color-text-primary);
 }
