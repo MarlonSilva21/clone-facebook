@@ -4,6 +4,10 @@ ul{
   list-style: none;
 }
 
+.text-cs{
+  color: #216fdb;
+}
+
 .p-0-16{
   padding: 0 16px;
 }
@@ -28,6 +32,10 @@ ul.ml-li li{
   font-size: 10px;
 }
 
+.fz-11{
+  font-size: 12px;
+}
+
 .fz-12{
   font-size: 14px;
 }
@@ -39,6 +47,18 @@ ul.ml-li li{
 .f-ubuntu{
   font-weight: 450;
   color: #65676b;
+}
+
+.b-room{
+  border: 2px solid #e7f3ff;
+  border-radius: 20px;
+  height: 35px;
+}
+
+.b-room:hover{
+  background: #e4e6eb;
+  cursor: pointer;
+  border: 2px solid #dadae1;
 }
 
 .f-bold-500{
@@ -134,6 +154,14 @@ ul#list-icons-nav li {
   color: #65676b;
   padding: 0 0 1px;
   opacity: 0.9;
+}
+
+.p-fixed-nav{
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  z-index: 100;
 }
 
 .p-fixed-l{
@@ -302,8 +330,111 @@ ul#list-icons-nav li {
 
 .card-search{
   width: 100%;
-  height: 115px;
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-room{
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-search-icon1{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/ZmTfgeJZMKU.png);
+  background-position: 0 0;
+  background-size: 26px 656px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.card-search-icon2{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/ZmTfgeJZMKU.png);
+  background-position: 0 -234px;
+  background-size: 26px 656px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.card-search-icon3{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/ZmTfgeJZMKU.png);
+  background-position: 0 -26px;
+  background-size: 26px 656px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+input.plh{
+  font-size: 15px;
+  font-weight: normal ;
+}
+
+.icon-create-room{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/oDS5E9id3Nl.png);
+  background-position: 0 -220px;
+  background-size: 502px 246px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.icon-like{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/omofkwlI4kW.png);
+  background-position: 0 -354px;
+  background-size: 34px 772px;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+
+
+}
+
+.icon-comment{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/omofkwlI4kW.png);
+  background-position: 0 -314px;
+  background-size: 34px 772px;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.icon-share{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/omofkwlI4kW.png);
+  background-position: 0 -374px;
+  background-size: 34px 772px;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.text-wrp{
+  word-break: break-all;
+}
+
+.icon-love{
+  transform: translateX(-5px);
+  z-index: 10;
+}
+
+.icon-img-like{
+  z-index: 100;
+  position: relative;
+}
+
+.img-feed{
+  max-height: 500px;
+  min-width: 100%;
 }
