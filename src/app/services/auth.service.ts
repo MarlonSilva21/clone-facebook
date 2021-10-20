@@ -32,8 +32,8 @@ export class AuthService {
     return this.http.post<Usuario>('http://localhost:8080/usuario/register', usuario)
   }
 
-  getAll(): Observable<Usuario>{
-    return this.http.get<Usuario>('http://localhost:8080/usuario/', this.token)
+  getAll(): Observable<Usuario[]>{
+    return this.http.get<Usuario[]>('http://localhost:8080/usuario/', this.token)
   }
 
   getByIdUser(id: number): Observable<Usuario> {
@@ -41,6 +41,6 @@ export class AuthService {
   }
 
   getByNameUser(name: string): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(`http://localhost:8080/usuario/${name}`, this.token)
+    return this.http.get<Usuario[]>(`http://localhost:8080/usuario/name/${name}`, this.token)
   }
 }

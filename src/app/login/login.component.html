@@ -142,6 +142,11 @@
         </div>
 
         <div class="d-flex align-content-start">
+          <label for="user"></label>
+          <input [(ngModel)]="usuario.photo" type="text" class="form-control inp-bg" id="photo" placeholder="Insira o link da sua foto">
+        </div>
+
+        <div class="d-flex align-content-start">
           <label for="newPassword"></label>
           <input [(ngModel)]="usuario.password" type="password" class="form-control inp-bg" id="newPassword" placeholder="Nova senha">
         </div>
@@ -216,17 +221,17 @@
 
           <div class="form-control d-flex align-items-baseline  justify-content-between ">
             <label for="female" class="input-modal">Feminino</label>
-            <input  class="" type="radio" name="gender" id="female">
+            <input  class="" type="radio" name="gender" value="Feminino" id="female">
           </div>
 
           <div class="form-control d-flex align-items-baseline justify-content-between ml-2 mr-2">
            <label for="male" class="input-modal">Masculino</label>
-            <input  class="" type="radio" name="gender" id="male">
+            <input  class="" type="radio" name="gender" value="Masculino" id="male">
           </div>
 
           <div class="form-control d-flex align-items-baseline justify-content-between ">
             <label for="other" class="input-modal">Personalizado</label>
-            <input  class="" type="radio" name="gender" id="other">
+            <input  class="" type="radio" name="gender" value="Outro" id="other">
           </div>
 
         </div>

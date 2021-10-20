@@ -43,6 +43,11 @@ export class LoginComponent implements OnInit {
     }
 
     else {
+
+      if(this.usuario.photo == null) {
+        this.usuario.photo = "https://i.imgur.com/U0UhX6I.png"
+      }
+
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
 

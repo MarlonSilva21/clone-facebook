@@ -13,11 +13,28 @@
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active ">
-          <div class="d-flex align-items-center inp-search">
+          <div class="d-flex align-items-center inp-src">
             <img class="ml-2 img-opacity" src="https://i.imgur.com/vtpFCkh.png" alt="ícone de busca" height="20px"
                  width="20px">
-            <input class="form-control mr-sm-2 inp-search" type="search" placeholder="Pesquisar no facebook"
-                   aria-label="Pesquisar">
+            <input id="dropSearch" class="form-control mr-sm-2 inp-src" type="search" placeholder="Pesquisar no facebook"
+                   aria-label="Pesquisar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   [(ngModel)]="userName" (keyup)="findByNameUser()">
+
+            <div class="dropdown-menu " aria-labelledby="dropSearch">
+
+              <span class="ml-3 f-bold-500 fz-15">Usuario encontrados</span>
+
+            <div class="d-flex align-items-center" *ngFor="let item of listaUsuario">
+
+              <div class="ml-3 mr-2 mt-2">
+                <img src="{{item.photo}}" alt="" width="30" height="30">
+              </div>
+              <div>{{item.name + " " + item.lastName}}</div>
+
+            </div>
+
+            </div>
+
           </div>
         </li>
 
@@ -46,7 +63,7 @@
 
         </li>
 
-        <li class="nav-item active ">
+        <li class="nav-item active icon-h">
 
           <div>
             <a href="">
@@ -67,7 +84,7 @@
 
         </li>
 
-        <li class="nav-item active ">
+        <li class="nav-item active icon-h">
 
           <div>
             <a href="">
@@ -86,7 +103,7 @@
 
         </li>
 
-        <li class="nav-item active ">
+        <li class="nav-item active icon-h">
 
           <div>
             <a href="">
@@ -119,7 +136,7 @@
 
         </li>
 
-        <li class="nav-item active ">
+        <li class="nav-item active icon-h">
 
           <div>
             <a href="">
@@ -151,19 +168,19 @@
 
         <li class="d-flex align-items-center">
 
-          <div class="circle-icons d-flex justify-content-center align-items-center">
+          <button class="circle-icons d-flex justify-content-center align-items-center border-0 btn-h">
             <img src="https://i.imgur.com/LVS7MYM.png" alt="" width="15px" height="15px">
-          </div>
+          </button>
 
-          <div class="circle-icons d-flex justify-content-center align-items-center">
+          <button class="circle-icons d-flex justify-content-center align-items-center border-0 btn-h">
             <img src="https://i.imgur.com/XHlUOjv.png" alt="" width="15px" height="15px">
-          </div>
+          </button>
 
-          <div class="circle-icons d-flex justify-content-center align-items-center">
+          <button class="circle-icons d-flex justify-content-center align-items-center border-0 btn-h">
             <img src="https://i.imgur.com/zs7MExt.png" alt="" width="35px" height="35px">
-          </div>
+          </button>
 
-          <button class="circle-icons d-flex justify-content-center align-items-center border-0"
+          <button class="circle-icons d-flex justify-content-center align-items-center border-0 btn-h"
                   type="button" id="menuLogout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="https://i.imgur.com/gO4Azf9.png" alt="" width="11px" height="12px">
           </button>
@@ -186,14 +203,14 @@
     <div class="col-md-4 pl-2 p-fixed-l">
       <ul class="p-0 mt-li ml-li">
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="{{ photo }}" alt="imagem do usuario">
           </div>
           <span class="font-segoe">Marlon Silva</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
                  alt="imagem amigos">
@@ -201,7 +218,7 @@
           <span class="font-segoe">Amigos</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
                  alt="imagem grupos">
@@ -209,7 +226,7 @@
           <span class="font-segoe">Grupos</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/9BDqQflVfXI.png"
                  alt="imagem marketplace">
@@ -217,7 +234,7 @@
           <span class="font-segoe">Marketplace</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png"
                  alt="imagem icon play tv">
@@ -225,7 +242,7 @@
           <span class="font-segoe">Watch</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/AYj2837MmgX.png"
                  alt="imagem recentes">
@@ -233,7 +250,7 @@
           <span class="font-segoe">Lembranças</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png"
                  alt="imagem favoritos ">
@@ -241,7 +258,7 @@
           <span class="font-segoe">Salvos</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png"
                  alt="imagem paginas">
@@ -249,7 +266,7 @@
           <span class="font-segoe">Páginas</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/9-o1e6LN_TX.png"
                  alt="imagem eventos">
@@ -257,7 +274,7 @@
           <span class="font-segoe">Eventos</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/EWFR9xI64Mg.png"
                  alt="imagem empregos">
@@ -265,18 +282,18 @@
           <span class="font-segoe">Empregos</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <div class="circle-icons mr-2 d-flex justify-content-center align-items-center">
             <img src="https://i.imgur.com/JRhvQer.png" alt="" width="8px" height="8px">
           </div>
           <span class="font-segoe">Ver mais</span>
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center li-h w-75">
           <hr class=" m-0 w-75 ">
         </li>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center ">
           <span class="shortcut">Seus atalhos</span>
         </li>
 
@@ -289,16 +306,14 @@
 
         <div class="cards-stories mr-1">
 
-
           <div class="card-user-stories">
-            <img class="img-stories" src="{{ photo }}" height="100%" width="100%"
+            <img class="img-stories img-scale img-user" src="{{photo}}" height="100%" width="100%"
                  alt="imagem o usuario">
           </div>
 
-
           <div class="icon-card-user-stories d-flex justify-content-center align-items-center">
             <div class="icon-card-user-stories-intern d-flex justify-content-center align-items-center">
-              <img src="https://i.imgur.com/EtKiF0Q.png" alt="" width="20px" height="20px">
+              <img  src="https://i.imgur.com/EtKiF0Q.png" alt="" width="20px" height="20px">
             </div>
           </div>
 
@@ -306,9 +321,10 @@
             <span>Criar story</span>
           </div>
 
-
         </div>
-        <div class="cards-stories ml-1 mr-1 ics1 ics1-bg d-flex flex-column justify-content-between">
+        <div class="cards-stories ml-1 mr-1">
+
+          <div class="ics1 ics1-bg d-flex flex-column justify-content-between w-100 h-100">
 
           <div class="icon-card-stories d-flex ml-3 mt-3">
             <div class="icon-card-user-stories-intern d-flex justify-content-center align-items-center">
@@ -318,6 +334,8 @@
 
           <div class="span-stories-name f-bold-500 ml-3 mb-2">
             <span class="text-white">Louise Oliver </span>
+          </div>
+
           </div>
 
         </div>
@@ -377,7 +395,7 @@
 
             <div class="d-flex align-items-center inp-search w-100">
               <input class="form-control mr-sm-2 inp-search plh" type="search"
-                     placeholder="No que você está pensando, Marlon?"
+                     placeholder="No que você está pensando, {{nome}}?"
                      aria-label="Pesquisar">
             </div>
 
@@ -416,12 +434,10 @@
       <div class="row d-flex justify-content-center mt-3">
         <div class="col-md-11 card-room p-3 d-flex align-items-center">
 
-
           <div class="b-room p-2 d-flex align-items-center">
 
             <div class="icon-create-room mr-2"></div>
             <span class="fz-11 f-bold-500 text-cs">Criar sala</span>
-
 
           </div>
 
@@ -479,12 +495,8 @@
 
           </div>
 
-
         </div>
       </div>
-
-
-
 
       <div class="row d-flex justify-content-center mt-3" *ngFor="let item of listaPostagem | orderBy : key : reverse">
         <div class="col-md-11 card-search p-0" >
@@ -497,9 +509,10 @@
 
             <div class="lh-15">
 
-              {{texto}}
-              <span>{{texto}}</span> <br/>
-              <span class="fz-10">5 h &centerdot; </span>
+              <span>{{item.usuario.name +" "+ item.usuario.lastName}}</span> <br/>
+              <span class="fz-10">{{item.date | date : 'HH'}}h &centerdot;
+              <img class="icon-opacity" src="https://i.imgur.com/zxxTJ3D.png" alt="icon-world" width="10px" height="10px">
+              </span>
 
             </div>
           </div>
@@ -508,11 +521,9 @@
             <p class="text-justify flex-wrap">{{item.text}}</p>
           </div>
 
-
           <div class="">
             <img src="{{item.image}}" class="img-fluid img-feed" alt="image post">
           </div>
-
 
           <div class="d-flex justify-content-between pr-3 pl-3">
 
@@ -561,11 +572,6 @@
 
         </div>
       </div>
-
-
-
-
-
 
     </div>
 

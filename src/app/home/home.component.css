@@ -40,6 +40,10 @@ ul.ml-li li{
   font-size: 14px;
 }
 
+.fz-15{
+  font-size: 15px;
+}
+
 .fz-20{
   font-size: 30px;
 }
@@ -85,7 +89,17 @@ ul.ml-li li{
   margin-top: 15px;
 }
 
-.inp-search{
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.dropdown-menu.show{
+  left: -68px !important ;
+  margin-top: 12px !important;
+}
+
+.inp-src{
   background-color: #f0f2f5;
   border-radius: 50px;
   border: none;
@@ -93,8 +107,26 @@ ul.ml-li li{
   font-weight: normal;
 }
 
+.inp-search{
+  background-color: #f0f2f5;
+  border-radius: 50px;
+  border: none;
+  font-size: 13px;
+  font-weight: normal;
+
+  cursor: pointer;
+}
+
+.inp-search:hover{
+  background-color: #dbdde1;
+}
+
 .img-opacity{
   opacity: 0.7;
+}
+
+.icon-opacity{
+  opacity: 0.5;
 }
 
 .icons{
@@ -261,6 +293,7 @@ ul#list-icons-nav li {
 .cards-stories{
   width: 105px;
   height: 180px;
+  overflow: hidden;
   border-radius: 8px;
   background-color: #FFF;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2);
@@ -310,6 +343,8 @@ ul#list-icons-nav li {
 .ics1, .ics2, .ics3, .ics4{
   background-size: cover;
   background-position: center;
+
+  overflow: hidden;
 }
 
 .ics1-bg{
@@ -442,4 +477,31 @@ input.plh{
 .dropdown-menu{
   left: auto !important;
   right: 0 !important;
+}
+.li-h{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.li-h:hover{
+  background-color: #dbdde1;
+}
+
+.btn-h:hover{
+  background-color: #dbdde1;
+}
+
+.cards-stories:hover{
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+.img-scale:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.icon-h:hover{
+  background-color: #dbdde1;
+  border-radius: 8px;
 }

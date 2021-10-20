@@ -18,9 +18,11 @@ export class HomeComponent implements OnInit {
   photo = environment.photo
   idUser = environment.id
 
-  texto = "aasdsad"
+  userName: string
+  listaUsuario: Usuario[]
+  listaAllUsuario: Usuario[]
 
-  usuario: Usuario = new Usuario()
+  user: Usuario = new Usuario()
 
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
@@ -47,6 +49,7 @@ export class HomeComponent implements OnInit {
     this.authService.refreshToken()
     this.postagemService.refreshToken()
     this.getAllPostagem()
+    this.getAllUser()
   }
 
   getAllPostagem() {
@@ -55,9 +58,21 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  getAllUser(){
+    this.authService.getAll().subscribe((resp: Usuario[]) => {
+      this.listaAllUsuario = resp
+    })
+  }
+
+  findByNameUser(){
+      this.authService.getByNameUser(this.userName).subscribe((resp: Usuario[]) => {
+        this.listaUsuario = resp
+      })
+  }
+
   publicar() {
-    this.usuario.id = this.idUser
-    this.postagem.usuario = this.usuario
+    this.user.id = this.idUser
+    this.postagem.usuario = this.user
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
@@ -67,7 +82,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-    sair()
+  sair()
     {
       this.router.navigate(['/login'])
       environment.token = ''
@@ -75,5 +90,6 @@ export class HomeComponent implements OnInit {
       environment.photo = ''
       environment.id = 0
     }
+
 
   }
