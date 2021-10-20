@@ -1,26 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
+import { ModalModule } from "ngx-bootstrap/modal";
+import { OrderModule } from "ngx-order-pipe";
+
+import {CommonModule, HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 import { AppComponent } from './app.component';
-import {RouterModule} from "@angular/router";
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
   ],
     imports: [
-        BrowserModule,
-        RouterModule,
-        AppRoutingModule,
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      FormsModule,
+      ModalModule.forRoot(),
+      OrderModule,
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -19,10 +19,10 @@
 
 
              <label for="email"></label>
-             <input class="w-90" type="text" id="email" placeholder="Email ou telefone"> <br/>
+             <input [(ngModel)]="usuarioLogin.email" class="w-90" type="text" id="email" placeholder="Email ou telefone"> <br/>
 
              <label for="password"></label>
-             <input class="w-90" type="password" id="password" placeholder="Senha"> <br/>
+             <input [(ngModel)]="usuarioLogin.password" class="w-90" type="password" id="password" placeholder="Senha"> <br/>
 
              <button class="btn btn-color-primary text-white w-90 mt-3 pt-2 pb-2 font-weight-bold" (click)="entrar()">
                Entrar
@@ -35,7 +35,7 @@
            <hr class="w-90">
 
            <button class="btn btn-color-success text-white pt-2 pb-2 font-weight-bold"
-                   data-toggle="modal" data-target="#registerUser" (click)="ano()">Criar nova conta</button>
+                   data-toggle="modal" data-target="#registerUser">Criar nova conta</button>
          </div>
          <div class="create-page">
            <a href="#" class="text-dark font-weight-bold ">Criar uma Página</a> para uma celebridade, banda ou empresa.
@@ -129,21 +129,21 @@
         <div class="d-flex">
 
           <label for="name"></label>
-          <input  type="text" class="form-control inp-bg" id="name" placeholder="Nome">
+          <input [(ngModel)]="usuario.name" type="text" class="form-control inp-bg" id="name" placeholder="Nome">
 
           <label for="sobrenome"></label>
-          <input  class="form-control ml-2 inp-bg"  id="sobrenome" placeholder="Sobrenome">
+          <input [(ngModel)]="usuario.lastName" class="form-control ml-2 inp-bg"  id="sobrenome" placeholder="Sobrenome">
 
         </div>
 
         <div class="d-flex align-content-start">
           <label for="user"></label>
-          <input  type="text" class="form-control inp-bg" id="user" placeholder="Celular ou email">
+          <input [(ngModel)]="usuario.email" type="text" class="form-control inp-bg" id="user" placeholder="Celular ou email">
         </div>
 
         <div class="d-flex align-content-start">
           <label for="newPassword"></label>
-          <input  type="text" class="form-control inp-bg" id="newPassword" placeholder="Nova senha">
+          <input [(ngModel)]="usuario.password" type="password" class="form-control inp-bg" id="newPassword" placeholder="Nova senha">
         </div>
 
         <span class="span-modal">Data de nascimento </span>
@@ -212,21 +212,21 @@
         <span class="span-modal ">Gênero</span>
         <img class="img-span-modal" src="https://i.imgur.com/V4YrC4E.png" alt="">
 
-        <div class="d-flex ">
+        <div class="d-flex " ngDefaultControl [(ngModel)]='usuario.gender'>
 
           <div class="form-control d-flex align-items-baseline  justify-content-between ">
             <label for="female" class="input-modal">Feminino</label>
-            <input class="" type="radio" id="female">
+            <input  class="" type="radio" name="gender" id="female">
           </div>
 
           <div class="form-control d-flex align-items-baseline justify-content-between ml-2 mr-2">
            <label for="male" class="input-modal">Masculino</label>
-            <input class="" type="radio" id="male">
+            <input  class="" type="radio" name="gender" id="male">
           </div>
 
           <div class="form-control d-flex align-items-baseline justify-content-between ">
             <label for="other" class="input-modal">Personalizado</label>
-            <input class="" type="radio" id="other">
+            <input  class="" type="radio" name="gender" id="other">
           </div>
 
         </div>
@@ -239,7 +239,7 @@
         </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-success w-75"  data-dismiss="modal">Cadastre-se</button>
+        <button type="button" class="btn btn-success w-75"  data-dismiss="modal" (click)="cadastrar()">Cadastre-se</button>
       </div>
     </div>
   </div>

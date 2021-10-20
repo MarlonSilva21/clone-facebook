@@ -142,10 +142,10 @@
 
         <li class="nav-item active d-flex justify-content-center align-items-center">
           <div class="">
-            <img class="circle-img-user" src="https://i.imgur.com/2HPUip7.png" alt="foto do usuario">
+            <img class="circle-img-user" src="{{ photo }}" alt="foto do usuario">
           </div>
           <div>
-            <p class="name-user mr-3">Marlon</p>
+            <p class="name-user mr-3">{{ nome }}</p>
           </div>
         </li>
 
@@ -169,8 +169,8 @@
           </button>
 
           <div class="dropdown-menu" aria-labelledby="menuLogout">
-            <a class="dropdown-item" href="#">Perfil</a>
-            <a class="dropdown-item" href="#">Sair</a>
+            <a class="dropdown-item btn" href="#">Perfil</a>
+            <a class="dropdown-item btn" (click)="sair()">Sair</a>
           </div>
 
         </li>
@@ -188,7 +188,7 @@
 
         <li class="d-flex align-items-center">
           <div class=" mr-2">
-            <img class="circle-img-user-two" src="https://i.imgur.com/2HPUip7.png" alt="imagem do usuario">
+            <img class="circle-img-user-two" src="{{ photo }}" alt="imagem do usuario">
           </div>
           <span class="font-segoe">Marlon Silva</span>
         </li>
@@ -291,7 +291,7 @@
 
 
           <div class="card-user-stories">
-            <img class="img-stories" src="https://i.imgur.com/2HPUip7.png" height="100%" width="100%"
+            <img class="img-stories" src="{{ photo }}" height="100%" width="100%"
                  alt="imagem o usuario">
           </div>
 
@@ -482,31 +482,35 @@
 
         </div>
       </div>
-      <div class="row d-flex justify-content-center mt-3">
-        <div class="col-md-11 card-search p-0">
+
+
+
+
+      <div class="row d-flex justify-content-center mt-3" *ngFor="let item of listaPostagem | orderBy : key : reverse">
+        <div class="col-md-11 card-search p-0" >
 
           <div class="d-flex pl-3 pt-3">
 
             <div class=" mr-2">
-              <img class="circle-img-user-two" src="https://i.imgur.com/2HPUip7.png" alt="imagem do usuario">
+              <img class="circle-img-user-two" src="{{item.usuario.photo}}" alt="imagem do usuario">
             </div>
 
             <div class="lh-15">
 
-              <span>Marlon</span> <br/>
+              {{texto}}
+              <span>{{texto}}</span> <br/>
               <span class="fz-10">5 h &centerdot; </span>
 
             </div>
           </div>
 
           <div class="d-flex text-wrp pl-3 pr-3">
-            <p class="text-justify flex-wrap">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <p class="text-justify flex-wrap">{{item.text}}</p>
           </div>
 
 
           <div class="">
-            <img class="img-fluid img-feed" src="https://i.imgur.com/dEokzu6.jpg" alt="">
+            <img src="{{item.image}}" class="img-fluid img-feed" alt="image post">
           </div>
 
 
@@ -557,81 +561,11 @@
 
         </div>
       </div>
-      <div class="row d-flex justify-content-center mt-3">
-        <div class="col-md-11 card-search p-0">
-
-          <div class="d-flex pl-3 pt-3">
-
-            <div class=" mr-2">
-              <img class="circle-img-user-two" src="https://i.imgur.com/2HPUip7.png" alt="imagem do usuario">
-            </div>
-
-            <div class="lh-15">
-
-              <span>Marlon</span> <br/>
-              <span class="fz-10">5 h &centerdot; </span>
-
-            </div>
-          </div>
-
-          <div class="d-flex text-wrp pl-3 pr-3">
-            <p class="text-justify flex-wrap">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-          </div>
 
 
-          <div class="">
-            <img class="img-fluid img-feed" src="https://i.imgur.com/dEokzu6.jpg" alt="">
-          </div>
 
 
-          <div class="d-flex justify-content-between pr-3 pl-3">
 
-            <div >
-              <img
-                src="https://i.imgur.com/DdvE438.png" alt="" width="20px" height="17px" class="icon-img-like">
-
-              <img
-                src="https://i.imgur.com/sSJiZoI.png" alt="" width="18px" height="17px" class="icon-love">
-            </div>
-
-            <div>
-              <span class="fz-12 img-opacity">
-                 0 Comentários
-              </span>
-            </div>
-
-          </div>
-
-          <hr class="mb-2">
-
-          <div class="d-flex justify-content-around align-items-end pb-2">
-
-            <div class="d-flex align-items-center">
-
-              <i class="icon-like mr-2 img-opacity"></i>
-              <span class="f-color-grey fz-12 f-bold-500">Curtir</span>
-
-            </div>
-
-            <div class="d-flex align-items-center">
-
-              <i class="icon-comment mr-2 img-opacity"></i>
-              <span class="f-color-grey fz-12 f-bold-500">Comentar</span>
-
-            </div>
-
-            <div class="d-flex align-items-center">
-
-              <i class="icon-share mr-2 img-opacity"></i>
-              <span class="f-color-grey fz-12 f-bold-500">Compartilhar</span>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
 
     </div>
 
