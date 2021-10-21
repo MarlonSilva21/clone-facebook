@@ -11,6 +11,6 @@ export class Usuario{
   public gender: string
   public birthDate: Date
 
-  public postagem: Postagem[]
+  public postagens: Postagem[]
 
 }

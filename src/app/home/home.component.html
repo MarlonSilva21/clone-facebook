@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light shw p-0-16 p-fixed-nav">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" routerLink="/home">
     <img src="https://i.imgur.com/3Vj2PjL.png" alt="logo do facebook" width="40px" height="40px">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
@@ -158,9 +158,10 @@
     <div class="col-md-4 d-flex justify-content-end">
       <ul class="navbar-nav ">
 
-        <li class="nav-item active d-flex justify-content-center align-items-center">
-          <div class="">
-            <img class="circle-img-user" src="{{ photo }}" alt="foto do usuario">
+        <li class="nav-item active d-flex justify-content-center align-items-center ufp"
+            [routerLink]="['/perfil-usuario', idUser]">
+          <div >
+            <img class="circle-img-user ml-1" src="{{ photo }}" alt="foto do usuario">
           </div>
           <div>
             <p class="name-user mr-3">{{ nome }}</p>
@@ -187,7 +188,7 @@
           </button>
 
           <div class="dropdown-menu" aria-labelledby="menuLogout">
-            <a class="dropdown-item btn" href="#">Perfil</a>
+            <a class="dropdown-item btn" [routerLink]="['/perfil-usuario', idUser]">Perfil</a>
             <a class="dropdown-item btn" (click)="sair()">Sair</a>
           </div>
 
@@ -204,11 +205,11 @@
     <div class="col-md-4 pl-2 p-fixed-l">
       <ul class="p-0 mt-li ml-li">
 
-        <li class="d-flex align-items-center li-h w-75">
+        <li class="d-flex align-items-center li-h w-75" [routerLink]="['/perfil-usuario', idUser]">
           <div class=" mr-2">
             <img class="circle-img-user-two" src="{{ photo }}" alt="imagem do usuario">
           </div>
-          <span class="font-segoe">Marlon Silva</span>
+          <span class="font-segoe">{{nome}} {{sobrenome}}</span>
         </li>
 
         <li class="d-flex align-items-center li-h w-75">
@@ -511,7 +512,8 @@
 
             <div class="lh-15">
 
-              <span>{{item.usuario.name + " " + item.usuario.lastName}}</span> <br/>
+              <a [routerLink]="['/perfil-usuario', item.usuario.id]">{{item.usuario.name + " " + item.usuario.lastName}}</a>
+              <br/>
               <span class="fz-10">{{item.date | date : 'HH'}}h &centerdot;
               <img class="icon-opacity" src="https://i.imgur.com/zxxTJ3D.png" alt="icon-world" width="10px"
                    height="10px">
@@ -525,7 +527,7 @@
           </div>
 
           <div>
-            <img   src="{{item.image}}" class="img-fluid img-feed" alt="image post">
+            <img src="{{item.image}}" class="img-fluid img-feed" alt="image post">
           </div>
 
           <div class="d-flex justify-content-between pr-3 pl-3">

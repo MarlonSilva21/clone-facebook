@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
 
-img{
+img {
   max-width: 100%;
   max-height: 100%;
 }
 
 ul {
   list-style: none;
+}
+
+a{
+  color: black;
 }
 
 .text-cs {
@@ -106,6 +110,16 @@ textarea:focus, input:focus, button:focus {
 .d-block-center {
   display: block;
   margin: auto;
+}
+
+.ufp {
+  height: 35px;
+}
+
+.ufp:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #f0f2f5;
 }
 
 .inp-src {
@@ -484,7 +498,7 @@ input.plh {
 }
 
 .dropdown-menu {
-  left: auto ;
+  left: auto;
   right: 0 !important;
 }
 
@@ -530,7 +544,5 @@ input.plh {
   color: #8a8d91;
 }
 
-.d-none{
-  display: none;
-}
+
 

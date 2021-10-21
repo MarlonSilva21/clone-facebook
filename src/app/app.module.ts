@@ -11,6 +11,7 @@ import {CommonModule, HashLocationStrategy, LocationStrategy} from "@angular/com
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 
 
 
@@ -19,6 +20,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
+    PerfilUsuarioComponent,
   ],
     imports: [
       BrowserModule,
