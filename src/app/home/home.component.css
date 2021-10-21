@@ -160,6 +160,7 @@ textarea:focus, input:focus, button:focus {
 ul#list-icons-nav li {
   margin-left: 80px;
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .circle-icons {

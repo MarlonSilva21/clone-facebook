@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 
 
@@ -21,6 +22,7 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     HomeComponent,
     LoginComponent,
     PerfilUsuarioComponent,
+    AlertsComponent,
   ],
     imports: [
       BrowserModule,

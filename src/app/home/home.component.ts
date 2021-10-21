@@ -5,6 +5,7 @@ import {AuthService} from "../services/auth.service";
 import {PostagemService} from "../services/postagem.service";
 import {Usuario} from "../models/Usuario";
 import {Postagem} from "../models/Postagem";
+import {AlertService} from "../services/alert.service";
 
 @Component({
   selector: 'app-home',
@@ -36,7 +37,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private alertas: AlertService
   ) {
   }
 
@@ -78,7 +80,7 @@ export class HomeComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagem()
     })

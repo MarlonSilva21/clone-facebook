@@ -5,6 +5,7 @@ import {Usuario} from "../models/Usuario";
 import {UsuarioLogin} from "../models/UsuarioLogin";
 import {environment} from "../../environments/environment.prod";
 import {PostagemService} from "../services/postagem.service";
+import {AlertService} from "../services/alert.service";
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private postagemService: PostagemService
+    private alertas: AlertService
   ) { }
 
   ngOnInit(){
@@ -33,15 +34,15 @@ export class LoginComponent implements OnInit {
 
   cadastrar() {
     if (this.usuario.email.indexOf('.') === -1) {
-      alert('Informe um email válido')
+      this.alertas.showAlertDanger('Informe um email válido')
     }
 
     else if (this.usuario.email.indexOf('@') === -1) {
-      alert('Informe um email válido')
+      this.alertas.showAlertDanger('Informe um email válido')
     }
 
     else if (this.usuario.password.length < 6) {
-      alert('Dígite uma senha com no mínimo 6 caracteres!')
+      this.alertas.showAlertInfo('Dígite uma senha com no mínimo 6 caracteres!')
     }
 
     else {
@@ -54,7 +55,7 @@ export class LoginComponent implements OnInit {
         this.usuario = resp
 
         window.location.reload()
-        alert('Usuário cadastrado com sucesso, Conecte-se')
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso, Conecte-se')
       })
     }
   }

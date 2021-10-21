@@ -5,6 +5,7 @@ import {Usuario} from "../models/Usuario";
 import {AuthService} from "../services/auth.service";
 import {PostagemService} from "../services/postagem.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {AlertService} from "../services/alert.service";
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -34,7 +35,8 @@ export class PerfilUsuarioComponent implements OnInit {
     private authService: AuthService,
     private postagemService: PostagemService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertService
   ) { }
 
   ngOnInit() {
@@ -72,6 +74,11 @@ export class PerfilUsuarioComponent implements OnInit {
 
     return ok
 
+  }
+
+
+  desativado(){
+    this.alertas.showAlertInfo('Este recurso não está disponível no momento ! ')
   }
 
   sair() {
