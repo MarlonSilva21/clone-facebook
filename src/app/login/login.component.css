@@ -10,6 +10,15 @@ ul li{
   padding: 0 5px;
 }
 
+textarea:focus, input:focus, button:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.cursor-nt{
+  cursor: not-allowed;
+}
+
 body{
   height: 100vh;
   background-color: #f0f2f5 !important;
