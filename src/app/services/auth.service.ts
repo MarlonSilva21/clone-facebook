@@ -25,22 +25,22 @@ export class AuthService {
   }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
-    return this.http.post<UsuarioLogin>('http://localhost:8080/usuario/login', usuarioLogin)
+    return this.http.post<UsuarioLogin>('https://apiclonefb.herokuapp.com/usuario/login', usuarioLogin)
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>('http://localhost:8080/usuario/register', usuario)
+    return this.http.post<Usuario>('https://apiclonefb.herokuapp.com/usuario/register', usuario)
   }
 
   getAll(): Observable<Usuario[]>{
-    return this.http.get<Usuario[]>('http://localhost:8080/usuario/', this.token)
+    return this.http.get<Usuario[]>('https://apiclonefb.herokuapp.com/usuario/', this.token)
   }
 
   getByIdUser(id: number): Observable<Usuario> {
-    return this.http.get<Usuario>(`http://localhost:8080/usuario/${id}`, this.token)
+    return this.http.get<Usuario>(`https://apiclonefb.herokuapp.com/usuario/${id}`, this.token)
   }
 
   getByNameUser(name: string): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(`http://localhost:8080/usuario/name/${name}`, this.token)
+    return this.http.get<Usuario[]>(`https://apiclonefb.herokuapp.com/usuario/name/${name}`, this.token)
   }
 }

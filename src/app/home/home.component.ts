@@ -80,10 +80,14 @@ export class HomeComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
+      alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagem()
     })
+  }
+
+  desativado(){
+    alert('Este recurso não está disponível no momento !')
   }
 
   sair() {

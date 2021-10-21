@@ -74,7 +74,10 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home'])
     }, erro => {
       if (erro.status == 500){
-        alert('Email ou senha estão errados!')
+       this.alertas.showAlertInfo('Email ou senha estão errados!')
+      }
+      else if(erro.status == 400){
+        this.alertas.showAlertInfo('Este usuário não existe!')
       }
     })
   }

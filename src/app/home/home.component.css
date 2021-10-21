@@ -13,6 +13,10 @@ a{
   color: black;
 }
 
+a.src-user-n{
+  text-decoration: none;
+}
+
 .text-cs {
   color: #216fdb;
 }
