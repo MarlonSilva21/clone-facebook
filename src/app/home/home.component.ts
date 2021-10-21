@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
   listaPostagem: Postagem[]
 
   key = 'data'
+  a: string
 
   reverse = true
 
@@ -50,6 +51,7 @@ export class HomeComponent implements OnInit {
     this.postagemService.refreshToken()
     this.getAllPostagem()
     this.getAllUser()
+
   }
 
   getAllPostagem() {
@@ -58,16 +60,16 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  getAllUser(){
+  getAllUser() {
     this.authService.getAll().subscribe((resp: Usuario[]) => {
       this.listaAllUsuario = resp
     })
   }
 
-  findByNameUser(){
-      this.authService.getByNameUser(this.userName).subscribe((resp: Usuario[]) => {
-        this.listaUsuario = resp
-      })
+  findByNameUser() {
+    this.authService.getByNameUser(this.userName).subscribe((resp: Usuario[]) => {
+      this.listaUsuario = resp
+    })
   }
 
   publicar() {
@@ -82,14 +84,13 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  sair()
-    {
-      this.router.navigate(['/login'])
-      environment.token = ''
-      environment.name = ''
-      environment.photo = ''
-      environment.id = 0
-    }
-
-
+  sair() {
+    this.router.navigate(['/login'])
+    environment.token = ''
+    environment.name = ''
+    environment.photo = ''
+    environment.id = 0
   }
+
+
+}

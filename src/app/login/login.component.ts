@@ -25,7 +25,9 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+
     window.scroll(0,0)
+    scroll(0,0)
   }
 
 
@@ -63,6 +65,7 @@ export class LoginComponent implements OnInit {
 
       environment.token = this.usuarioLogin.token
       environment.name = this.usuarioLogin.name
+      environment.lastName = this.usuarioLogin.lastName
       environment.photo = this.usuarioLogin.photo
       environment.id = this.usuarioLogin.id
 

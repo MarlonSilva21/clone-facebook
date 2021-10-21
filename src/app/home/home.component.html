@@ -16,22 +16,23 @@
           <div class="d-flex align-items-center inp-src">
             <img class="ml-2 img-opacity" src="https://i.imgur.com/vtpFCkh.png" alt="ícone de busca" height="20px"
                  width="20px">
-            <input id="dropSearch" class="form-control mr-sm-2 inp-src" type="search" placeholder="Pesquisar no facebook"
+            <input id="dropSearch" class="form-control mr-sm-2 inp-src" type="search"
+                   placeholder="Pesquisar no facebook"
                    aria-label="Pesquisar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                    [(ngModel)]="userName" (keyup)="findByNameUser()">
 
-            <div class="dropdown-menu " aria-labelledby="dropSearch">
+            <div class="dropdown-menu inpt" aria-labelledby="dropSearch">
 
               <span class="ml-3 f-bold-500 fz-15">Usuario encontrados</span>
 
-            <div class="d-flex align-items-center" *ngFor="let item of listaUsuario">
+              <div class="d-flex align-items-center" *ngFor="let item of listaUsuario">
 
-              <div class="ml-3 mr-2 mt-2">
-                <img src="{{item.photo}}" alt="" width="30" height="30">
+                <div class="ml-3 mr-2 mt-2">
+                  <img src="{{item.photo}}" alt="" width="30" height="30">
+                </div>
+                <div>{{item.name + " " + item.lastName}}</div>
+
               </div>
-              <div>{{item.name + " " + item.lastName}}</div>
-
-            </div>
 
             </div>
 
@@ -313,7 +314,7 @@
 
           <div class="icon-card-user-stories d-flex justify-content-center align-items-center">
             <div class="icon-card-user-stories-intern d-flex justify-content-center align-items-center">
-              <img  src="https://i.imgur.com/EtKiF0Q.png" alt="" width="20px" height="20px">
+              <img src="https://i.imgur.com/EtKiF0Q.png" alt="" width="20px" height="20px">
             </div>
           </div>
 
@@ -326,15 +327,15 @@
 
           <div class="ics1 ics1-bg d-flex flex-column justify-content-between w-100 h-100">
 
-          <div class="icon-card-stories d-flex ml-3 mt-3">
-            <div class="icon-card-user-stories-intern d-flex justify-content-center align-items-center">
-              <img class="img-rds" src="https://i.imgur.com/NlIMG97.jpg" alt="" width="25px" height="25px">
+            <div class="icon-card-stories d-flex ml-3 mt-3">
+              <div class="icon-card-user-stories-intern d-flex justify-content-center align-items-center">
+                <img class="img-rds" src="https://i.imgur.com/NlIMG97.jpg" alt="" width="25px" height="25px">
+              </div>
             </div>
-          </div>
 
-          <div class="span-stories-name f-bold-500 ml-3 mb-2">
-            <span class="text-white">Louise Oliver </span>
-          </div>
+            <div class="span-stories-name f-bold-500 ml-3 mb-2">
+              <span class="text-white">Louise Oliver </span>
+            </div>
 
           </div>
 
@@ -393,10 +394,11 @@
               <img class="circle-img-user-two" src="https://i.imgur.com/2HPUip7.png" alt="imagem do usuario">
             </div>
 
-            <div class="d-flex align-items-center inp-search w-100">
-              <input class="form-control mr-sm-2 inp-search plh" type="search"
-                     placeholder="No que você está pensando, {{nome}}?"
-                     aria-label="Pesquisar">
+            <div class="d-flex justify-content-start align-items-center inp-search w-100">
+              <button class="form-control text-start fz-15 mr-sm-2 inp-search plh" type="button"
+                      data-toggle="modal" data-target="#createPost"
+                      aria-label="Pesquisar">No que você está pensando, {{nome}}?
+              </button>
             </div>
 
           </div>
@@ -444,53 +446,53 @@
           <div class="d-flex">
 
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/NlIMG97.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/NlIMG97.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/s4CaBBh.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/s4CaBBh.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/fgWrpPC.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/fgWrpPC.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/c95JKTA.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/c95JKTA.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/U9obZlp.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/U9obZlp.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/ibJD8YT.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/ibJD8YT.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/KWzqQtB.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/KWzqQtB.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
-              <div class="d-flex align-items-center ml-2">
-                <div class=" mr-2">
-                  <img class="circle-img-user-two" src="https://i.imgur.com/g8IPtx4.jpg" alt="imagem do usuario">
-                </div>
+            <div class="d-flex align-items-center ml-2" id="teste">
+              <div class=" mr-2">
+                <img class="circle-img-user-two" src="https://i.imgur.com/g8IPtx4.jpg" alt="imagem do usuario">
               </div>
+            </div>
 
 
           </div>
@@ -499,7 +501,7 @@
       </div>
 
       <div class="row d-flex justify-content-center mt-3" *ngFor="let item of listaPostagem | orderBy : key : reverse">
-        <div class="col-md-11 card-search p-0" >
+        <div class="col-md-11 card-search p-0">
 
           <div class="d-flex pl-3 pt-3">
 
@@ -509,9 +511,10 @@
 
             <div class="lh-15">
 
-              <span>{{item.usuario.name +" "+ item.usuario.lastName}}</span> <br/>
+              <span>{{item.usuario.name + " " + item.usuario.lastName}}</span> <br/>
               <span class="fz-10">{{item.date | date : 'HH'}}h &centerdot;
-              <img class="icon-opacity" src="https://i.imgur.com/zxxTJ3D.png" alt="icon-world" width="10px" height="10px">
+              <img class="icon-opacity" src="https://i.imgur.com/zxxTJ3D.png" alt="icon-world" width="10px"
+                   height="10px">
               </span>
 
             </div>
@@ -521,13 +524,13 @@
             <p class="text-justify flex-wrap">{{item.text}}</p>
           </div>
 
-          <div class="">
-            <img src="{{item.image}}" class="img-fluid img-feed" alt="image post">
+          <div>
+            <img   src="{{item.image}}" class="img-fluid img-feed" alt="image post">
           </div>
 
           <div class="d-flex justify-content-between pr-3 pl-3">
 
-            <div >
+            <div>
               <img
                 src="https://i.imgur.com/DdvE438.png" alt="" width="20px" height="17px" class="icon-img-like">
 
@@ -687,6 +690,59 @@
 
     </div>
 
+  </div>
+
+</div>
+
+
+<!--Modal Create Post-->
+<div class="modal fade" id="createPost" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content dark2 shadow-lg">
+      <div class="modal-header">
+        <div class="d-block-center">
+          <h2 class="modal-title fz-20 font-weight-bold " id="exampleModalLabel">Criar publicação</h2>
+        </div>
+        <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="d-flex ">
+
+          <div class=" mr-2">
+            <img class="circle-img-user-two" src="{{photo}}" alt="imagem do usuario">
+          </div>
+
+          <div class="lh-15">
+
+            <span>{{nome}} {{sobrenome}}</span> <br/>
+            <span class="fz-10">
+              <img class="" src="https://i.imgur.com/SJAUKhL.png" alt="icon-world" width="70px"
+              >
+              </span>
+          </div>
+        </div>
+
+        <textarea [(ngModel)]="postagem.text" id="txtarea" class="w-100 mw-post fz-20 mt-2"
+                  placeholder="No que você está pensando, {{nome}}"></textarea>
+
+        <div class="d-flex align-content-start mb-2">
+          <label for="post-image"></label>
+          <input [(ngModel)]="postagem.image" type="text" class="form-control inp-bg  " id="post-image"
+                 placeholder="Insira o link de uma foto">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn bg-primary text-white w-100" data-dismiss="modal" (click)="publicar()">
+            Publicar
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
