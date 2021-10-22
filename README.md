@@ -1,7 +1,7 @@
 
 <h1 align="center">
     <br>
-    Clone Facebook
+    Facebook Clone
 </h1>
 
 <h4 align="center">
