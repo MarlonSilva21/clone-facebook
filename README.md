@@ -32,11 +32,39 @@ Prjeto desenvolvido com propósitos estudantis
 <img align="center" alt="gif" width="100%" height="100%" src="src/assets/cadastro-login.gif">
 
 <p align="center">
+  <a href="https://facebook-clone-marlon.netlify.app/" target="_blank">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
+  </a>
+</p>
+
+##
+
+<p align="center">
   <a href="#rocket-technologies">Tecnologias </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#install">Como instalar </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#features">Recursos e Funcionalidades </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#structure">Estrutura do projeto </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
+
+##
+
+##  <p align="center">⚠️ ATENÇÃO ⚠️</p> 
+
+```
+
+O Deploy do backend foi feito em um servidor gratuito do heroku então se for acessar o deploy da aplicação, quando fizer 
+a primeira interação com o backend (cadastro ou login) pode ser que demore alguns segundos para processar por conta do 
+servidor gratuito do heroku estar hibernando, porém depois do servidor acordar poderá usar normalmente sem delay algum 
+
+```
+
+### Link do Backend
+
+```
+https://github.com/MarlonSilva21/cloneFacebook-backend
+```
+
+
 
 ## :rocket: Tecnologias
 
@@ -57,6 +85,7 @@ Prjeto desenvolvido com propósitos estudantis
 ```bash
 git clone https://github.com/MarlonSilva21/clone-facebook.git 
 ```
+
 
 ### Usando o zip do Download manual
 
@@ -149,10 +178,18 @@ npm install
 ng serve 
 ```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+## Para acessar o deploy da aplicação:
+
+```
+https://facebook-clone-marlon.netlify.app/
+
+```
+
+<p>As intruções para uso interno da plataforma esta feito em forma de postagens e você poderá ver um mini tutorial de como usar assim que acessá-la</p>
+
 
 ##
 
-Made with ♥ by Marlon Silva :wave: [Get in touch!](https://www.linkedin.com/in/marlon-silva-43075a184/)
+Feito por Marlon Silva :wave: [Get in touch!](https://www.linkedin.com/in/marlon-silva-43075a184/)
 
 
