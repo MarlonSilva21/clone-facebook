@@ -5,7 +5,7 @@
 </h1>
 
 <h4 align="center">
-Prjeto desenvolvido com propósitos estudantis
+Projeto desenvolvido com propósitos estudantis
 </h4>
 
 <p align="center">
