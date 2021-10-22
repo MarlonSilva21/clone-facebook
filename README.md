@@ -78,7 +78,7 @@ https://github.com/MarlonSilva21/cloneFacebook-backend
 
 <h2 id="install"> Como instalar </h2>
 
-### Using Git (recommendado)
+### Usando Git (recommendado)
 
 1.  Clone o projeto do github. 
 
@@ -112,7 +112,7 @@ npm install
 - Tela de perfil para poder ver as suas postagens ou entrar no perfil de outro usuário
 - Poder fazer suas postagens direto da plataforma
 
-<h2 id="structure"> Project structure </h2>
+<h2 id="structure"> Estrutura do projeto </h2>
 
 ```sh
 .
