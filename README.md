@@ -29,6 +29,8 @@ Prjeto desenvolvido com propósitos estudantis
   <img alt="GitHub" src="https://img.shields.io/github/license/marlonsilva21/clone-facebook.svg">
 </p>
 
+<img align="center" alt="gif" width="100%" height="100%" src="src/assets/cadastro-login.gif">
+
 <p align="center">
   <a href="#rocket-technologies">Tecnologias </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#install">Como instalar </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
