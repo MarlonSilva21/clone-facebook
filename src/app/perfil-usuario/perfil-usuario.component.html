@@ -204,7 +204,7 @@
   <button [routerLink]="['/usuario-edit', idUser]" style="color: white;" class="btn btn-user-edit text-dark btn-lg m-3"
           *ngIf='postagemEdit()'>Editar Usuário
   </button>
-  <img style="position: absolute; right: 0; left: 0; bottom: 0; top: 0; margin: auto;" width="200"
+  <img style="position: absolute; right: 0; left: 0; bottom: 0; top: 0; margin: auto; width: 200px; height: 200px"
        src="{{usuario.photo}}" class="img-fluid rounded-circle"
        alt="Imagem do usuario logado">
 
@@ -213,14 +213,6 @@
 <h3 class="text-center">{{usuario.name}} {{usuario.lastName}}</h3>
 
 <div class="container">
-
-
-
-
-
-
-
-
 
   <div class="row d-flex mh-40 justify-content-center mt-3" *ngFor="let postagem of usuario.postagens | orderBy : key : reverse" >
     <div class="col-md-6 card-search p-0" >
@@ -297,14 +289,4 @@
 
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
 </div>
